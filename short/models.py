@@ -25,7 +25,7 @@ class LinkFunc(models.Manager):
 
     def create_random_url(self):
         chars = ascii_letters + digits
-        result= 'https://vfls.herokuapp/' + ''.join(random.choice(chars) for n in range(3))
+        result= 'https://vfls.herokuapp.com/' + ''.join(random.choice(chars) for n in range(3))
         return result
 
     def check_new_url(self, list_new_url):
