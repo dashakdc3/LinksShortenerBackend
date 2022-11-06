@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:8
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 132465798
+      MYSQL_DATABASE: test
+
+  backend:
+    build: .
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    command: sh -c "pip install -r requirements.txt && python manage.py runserver "
+
+  # uiweb:
+  #   build: ./uiweb
+  #   volumes:
+  #     - ./uiweb/src:/uiweb/src
+  #     - ./uiweb/public:/uiweb/public
+  #     - ./uiweb/package.json:/uiweb/package.json
+  #     - ./uiweb/package-lock.json:/uiweb/package-lock.json
+  #   expose:
+  #     - "3000"
+  #   ports:
+  #     - "3000:3000"
+  #   links:
+  #     - backend:backend
+  #   environment:
+  #     DEBUG: "true"
+  #   command: npm start
+  #   depends_on:
+  #     - backend
