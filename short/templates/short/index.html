@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="{% static 'short/index.css' %}" />
+    <script
+      src="https://kit.fontawesome.com/f39d4e3df1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header_container">
+      <li>
+        <i class="icons fa-solid fa-house"></i>
+        <a
+          href="https://fast-links-shortener.herokuapp.com/"
+          class="link-primary"
+          >Main</a
+        >
+      </li>
+
+      <li>
+        <i class="icons fa-solid fa-right-to-bracket"></i>
+        <a
+          href="https://fast-links-shortener.herokuapp.com/user/login/"
+          class="link-primary"
+          >Login</a
+        >
+      </li>
+      <li>
+        <i class="icons fa-solid fa-registered"></i>
+        <a
+          href="https://fast-links-shortener.herokuapp.com/user/register/"
+          class="link-primary"
+          >Register</a
+        >
+      </li>
+    </header>
+    <div class="home-page">
+      <div class="card card__container">
+        <img
+          src="https://www.dignited.com/wp-content/uploads/2019/08/Best-URL-Shortening-Tools-For-2018-1024x768.jpg"
+          class="card-img-top card__img"
+          alt=""
+        />
+        <div class="card-body">
+          <p class="card-text card_text_update">
+            <a
+              href="https://fast-links-shortener.herokuapp.com/home/short_link/"
+              class="link-primary"
+              >Short The Link</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="card card__container">
+        <img
+          src="https://comofuncionaque.com/wp-content/uploads/2015/04/La-URL-es-la-direccion-de-una-informacion-que-se-encuentra-en-un-determinado-alojamiento-o-dominio-de-la-red.png"
+          class="card-img-top card__img"
+          alt=""
+        />
+        <div class="card-body">
+          <p class="card-text card_text_update">
+            <a
+              href="https://fast-links-shortener.herokuapp.com/home/my_links/"
+              class="link-primary"
+              >My Links</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
